@@ -12,7 +12,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 - **LCM Finder.**
 - **Palindrome in String.**
 - **Print All Divisors.**
-- **Reverse Word in String**
+- **Reverse Word in String.**
 - **String and String Buffer**
 - **Anagram Method 2**
 - **Count Words in a String**
