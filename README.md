@@ -56,7 +56,7 @@ public class Anagram {
 }
 ```
 
-### 2. **Compare Strings in Java**
+### 2. **Compare Strings in Java.**
 ```java
 public class CompareStrings {
     public static void main(String[] args) {
