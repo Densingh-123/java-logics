@@ -72,7 +72,7 @@ public class CompareStrings {
 }
 ```
 
-### 3. **Find Duplicates in Array**
+### 3. **Find Duplicates in Array.**
 ```java
 import java.util.HashSet;
 
