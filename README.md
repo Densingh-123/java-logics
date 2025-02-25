@@ -35,7 +35,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 
 ## 🛠️ Java Concepts and Code Snippets
 
-### 1. **Anagram**
+### 1. **Anagram.**
 ```java
 import java.util.Arrays;
 
