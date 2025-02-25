@@ -94,7 +94,7 @@ public class FindDuplicates {
 }
 ```
 
-### 4. **LCM Finder**
+### 4. **LCM Finder.**
 ```java
 public class LCMFinder {
     public static int gcd(int a, int b) {
