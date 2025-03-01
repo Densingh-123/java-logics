@@ -15,7 +15,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 - **Reverse Word in String.**
 - **String and String Buffer.**
 - **Anagram Method 2**
-- **Count Words in a String**
+- **Count Words in a String.**
 - **First Non-Repeated Character**
 - **Median of an Array**
 - **Prime Number Checker**
