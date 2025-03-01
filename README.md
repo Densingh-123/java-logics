@@ -13,7 +13,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 - **Palindrome in String.**
 - **Print All Divisors.**
 - **Reverse Word in String.**
-- **String and String Buffer**
+- **String and String Buffer.**
 - **Anagram Method 2**
 - **Count Words in a String**
 - **First Non-Repeated Character**
