@@ -20,7 +20,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 - **Median of an Array.**
 - **Prime Number Checker**
 - **Remove Duplicates from String**
-- **Reversing Number**
+- **Reversing Number.**
 - **String Palindrome Checker**
 - **Armstrong Number**
 - **Fibonacci Series**
