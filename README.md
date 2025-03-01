@@ -29,7 +29,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 - **Print Alternative Numbers**
 - **Reverse Array**
 - **Streams**
-- **Ways to Print Elements in Java**
+- **Ways to Print Elements in Java.**
 
 ---
 
