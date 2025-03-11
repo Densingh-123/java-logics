@@ -9,7 +9,7 @@ A curated list of Java logics essential for placement preparation. Each topic is
 - **Anagram**
 - **Compare Strings in Java**
 - **Find Duplicates in Array**
-- **LCM Finder.**
+- **LCM Finder**
 - **Palindrome in String.**
 - **Print All Divisors**
 - **Reverse Word in String.**
