@@ -1,0 +1,33 @@
+package pratice;
+
+public class swap {
+public static void main(String[] args) {
+	int a=10;
+	int b=20;
+	int c=0;
+	System.out.println("Before Swapping two Values : "+a+" "+b);
+	//Logic -1 using third value
+	int t=a;
+    a=b;
+    b=t;
+	System.out.println("After Swapping two Values : "+a+" "+b);
+	//Logic - 2 (using + and - operator without using third variable)
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	System.out.println("After Swapping two Values : "+a+" "+b);
+	//Logic - 3 (using * and / operator without using third variable) 
+	a=a*b;
+	b=a/b;
+	a=a/b;
+	System.out.println("After Swapping two Values : "+a +" "+b);
+	//Logic - 4 (Bitwise XOR (^))
+	a=a^b;
+	b=a^b;
+	a=a^b;
+	System.out.println("After Swapping two Values : "+a+" "+b);
+	//Logic - 5 (single statement using logics)
+	b=a+b-(a=b);
+	System.out.println("After Swapping two Values : "+a+" "+b);
+}
+}
