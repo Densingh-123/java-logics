@@ -1,0 +1,57 @@
+import java.util.*;
+class Stack{
+    class Node{
+        int data;
+        Node next;
+        Node(int val){
+            data=val;
+            next=null;
+        }
+    }
+    Node head;
+    Stack(){
+        head=null;
+    }
+    public void push(int val){
+        Node newNode = new Node(val);
+        newNode.next=head;
+        head=newNode;
+    }
+    public int pop(){
+       
+        int ans = head.data;
+        head=head.next;
+        return ans;
+    }
+    public int peek(){
+        return head.data;
+       
+    }
+    public void display(){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Stack st = new Stack();
+        st.push(10);
+         st.push(20);
+         st.push(30);
+          st.push(40);
+          st.display();
+          System.out.println();
+          System.out.println(st.pop());
+          System.out.println();
+          st.display();
+          System.out.println();
+          System.out.println(st.pop());
+          System.out.println();
+          st.display();
+          System.out.println();
+          System.out.println(st.peek());
+    }
+}
