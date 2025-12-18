@@ -1,0 +1,174 @@
+import java.util.*;
+class DLinkedList{
+    Node head;
+    Node tail;
+    class Node{
+        int data;
+        Node prev;
+        Node next;
+        Node(int val){
+            data=val;
+            next=null;
+            prev=null;
+        }
+    }
+    DLinkedList(){
+        head=null;
+        tail=null;
+    }
+    public void addAtBegining(int val){
+        Node newNode = new Node(val);
+        if(head==null){
+            head=tail=newNode;
+            newNode.prev=null;
+        }else{
+        newNode.next=head;
+        head.prev=newNode;
+        newNode.prev=null;
+        head=newNode;
+        }
+    }
+    public void display(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+    public void reverse(){
+        Node temp=tail;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.prev;
+        }
+    }
+    public void insertAtPos(int pos,int val){
+        if(pos==0){
+            addAtBegining(val);
+            return;
+        }
+        Node newNode = new Node(val);
+        Node temp=head;
+       for(int i=1;i<pos;i++){
+           temp=temp.next;
+           if(temp==null){
+               System.out.print("list is empty..");
+               return;
+           }
+       }
+       newNode.next=temp.next;
+       newNode.prev=temp;
+       if(temp!=null){
+           temp.next.prev=newNode.next;
+       }else{
+           tail=newNode;
+       }
+       temp.next=newNode;
+    }
+    public void deleteAtStart(){
+        Node temp = head;
+        if(temp==null){
+            System.out.print("list is empty..");
+            return;
+        }
+        head=temp.next;
+        temp.next.prev=null;
+    }
+    public void deleteAtPos(int pos){
+        Node temp=head;
+        for(int i=1;i<pos;i++){
+            if(temp==null){
+            System.out.print("list is empty..");
+            return;
+        }
+        temp=temp.next;
+        }
+        temp.next=temp.next.next;
+    }
+    public void get(int pos){
+        Node temp=head;
+        for(int i=0;i<pos;i++){
+             if(temp==null){
+            System.out.print("list is empty..");
+            return;
+        }
+            temp=temp.next;
+            
+        }
+        System.out.print(temp.data);
+            
+    }
+    public void contain(int val){
+       Node temp=head;
+       while(temp!=null){
+           if(temp.data==val){
+               System.out.println(temp.data+" Element is present ");
+               return;
+           }
+          
+           temp=temp.next;
+       }
+       System.out.println("Element is not present ");
+    }
+    public void oddevenlist(){
+        Node odd=head;
+        Node even = head.next;
+        Node evenHead=even;
+        while(even!=null && even.next!=null){
+            odd.next=odd.next.next;
+            odd=odd.next;
+            even.next=even.next.next;
+            even=even.next;
+            
+        }
+       odd.next=evenHead;
+            
+    }
+    public boolean cycle(){
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null &&fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        DLinkedList list = new DLinkedList();
+        list.addAtBegining(10);
+        list.addAtBegining(20);
+        list.addAtBegining(30);
+        list.addAtBegining(40);
+        list.addAtBegining(50);
+        list.addAtBegining(60);
+        list.display();
+        System.out.println();
+        list.reverse();
+         System.out.println();
+        list.insertAtPos(2,35);
+        list.display();
+        System.out.println();
+        list.deleteAtStart();
+        list.display();
+        System.out.println();
+        list.deleteAtPos(2);
+        list.display();
+        System.out.println();
+        list.get(2);
+        System.out.println();
+        list.contain(30);
+        System.out.println();
+        list.display();
+        System.out.println();
+        list.oddevenlist();
+        list.display();
+        System.out.println();
+         System.out.println(list.cycle());
+        
+    }
+}
