@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int[] arr={1,2,3,4};
+	List<List<Integer>> res = new ArrayList<>();
+	ArrayList<Integer> temp = new ArrayList<>();
+	backtrack(arr,res,temp);
+	System.out.println(res);
+	}
+	public static void backtrack(int[] arr,List<List<Integer>> res ,ArrayList<Integer> temp){
+	    if(temp.size()==arr.length){
+	        res.add(new ArrayList<>(temp));
+	    }
+	    for(int val : arr){
+	        if(temp.contains(val)){
+	            continue;
+	        }
+	        temp.add(val);
+	        backtrack(arr,res,temp);
+	        temp.remove(temp.size()-1);
+	    }
+	}
+}
