@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr={1,1,2};
+		List<List<Integer>> res = new ArrayList<>();
+		ArrayList<Integer> temp = new ArrayList<>();
+		backtrack(arr,res,temp,new boolean[arr.length]);
+		System.out.println(res);
+	}
+	public static void backtrack(int[] arr,List<List<Integer>> res ,ArrayList<Integer> temp,boolean[] used){
+	    if(temp.size()==arr.length && !res.contains(temp)){
+	        res.add(new ArrayList<>(temp));
+	        return;
+	    }
+	    for(int i=0;i<arr.length;i++){
+	        if(used[i])continue;
+	        used[i]=true;
+	        temp.add(arr[i]);
+	        backtrack(arr,res,temp,used);
+	        used[i]=false;
+	        temp.remove(temp.size()-1);
+	    }
+	}
+}
