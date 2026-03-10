@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int n = 15;
+	int a=5;
+	int b = 7;
+	int c = 8;
+	System.out.print(maxpeice(n,a,b,c));
+	}
+	public static int maxpeice(int n,int a,int b,int c){
+	    if(n==0){
+	        return 0;
+	    }
+	    if(n<0){
+	        return -1;
+	    }
+	    int t1 = maxpeice(n-a,a,b,c);
+	    int t2 = maxpeice(n-b,a,b,c);
+	    int t3 = maxpeice(n-c,a,b,c);
+	    int max = Math.max(t1,Math.max(t2,t3));
+	    if(max==-1){
+	        return -1;
+	    }
+	    return max+1;
+	}
+}
